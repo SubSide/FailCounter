@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nl.thomasvdbulk.failcounter.AddFailActivity"
+    android:padding="20dp">
+    <TextView
+        android:id="@+id/add_fail_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_fail_title"
+        android:textStyle="bold"
+        android:textSize="@dimen/add_fail_header" />
+    <TextView
+        android:id="@+id/add_fail_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/add_fail_author"
+        android:textSize="@dimen/add_fail_text"
+        app:layout_constraintTop_toBottomOf="@id/add_fail_header"
+        />
+    <TextView
+        android:id="@+id/add_fail_datetime"
+        android:layout_marginTop="@dimen/add_fail_bottom_margin"
+        app:layout_constraintTop_toBottomOf="@id/add_fail_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_fail_datetime"
+        android:textStyle="bold"
+        android:textSize="@dimen/add_fail_text" />
+    <Button
+        android:id="@+id/add_fail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/add_fail_datetime"
+        tools:text="31-03-2018"
+        android:padding="@dimen/add_fail_text_padding"
+        android:textSize="@dimen/add_fail_button_text" />
+    <Button
+        android:id="@+id/add_fail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/add_fail_button_text"
+        android:padding="@dimen/add_fail_text_padding"
+        android:layout_marginStart="@dimen/add_fail_button_margin"
+        app:layout_constraintTop_toTopOf="@id/add_fail_date"
+        app:layout_constraintLeft_toRightOf="@id/add_fail_date"
+        tools:text="15:47"/>
+    <TextView
+        android:id="@+id/add_fail_message_title"
+        android:layout_marginTop="@dimen/add_fail_bottom_margin"
+        app:layout_constraintTop_toBottomOf="@id/add_fail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_fail_reason"
+        android:textStyle="bold"
+        android:textSize="@dimen/add_fail_text" />
+    <EditText
+        android:id="@+id/add_fail_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_fail_reason_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/add_fail_message_title"
+        />
+    <Button
+        android:id="@+id/add_fail_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/add_fail_text"
+        android:layout_marginTop="@dimen/add_fail_bottom_margin"
+        app:layout_constraintTop_toBottomOf="@id/add_fail_reason"
+        android:text="@string/add_fail_submit"
+        />
+</android.support.constraint.ConstraintLayout>
